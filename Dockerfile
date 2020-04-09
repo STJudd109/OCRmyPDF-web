@@ -13,7 +13,8 @@ WORKDIR /app
 
 ADD requirements.txt /app
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -q -r requirements.txt
+RUN appenv/bin/pip install -q -r requirements.txt
 
 ADD server.py index.htm entrypoint.sh /app/
 ADD static /app/static/
