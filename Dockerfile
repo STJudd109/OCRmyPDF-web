@@ -16,6 +16,4 @@ RUN pip install -r requirements.txt
 ADD server.py index.htm entrypoint.sh /app/
 ADD static /app/static/
 
-USER docker
-
 ENTRYPOINT ["/app/entrypoint.sh"]
